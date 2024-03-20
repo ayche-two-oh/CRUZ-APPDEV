@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>another</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Another</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<div style="text-align: center;">
+  <strong>SELECT BUTTON<br><br></strong>
+    <ion-button href="third-page">Go By Link</ion-button><br>
+    <ion-button (click)="goByEvent()">Go By Event</ion-button><br>
+    <ion-button (click)="goWithAuthorization()">Authenticate</ion-button><br>
+</div>
+
+</ion-content>
