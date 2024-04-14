@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>DASHBOARD</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">dashboard</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="container">
+    API RESOURCE
+    <div class="list-show">
+      <div class="content" *ngFor="let show of shows; let i = index;">
+        <div *ngIf="i < 15">
+          Name : {{ show.name }} - genre : {{ show.genres }}
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
