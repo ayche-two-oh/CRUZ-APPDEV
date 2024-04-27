@@ -30,6 +30,11 @@ export class LoginPage implements OnInit {
     this.presentAlert('Error', 'Invalid Password' );
   });
 }
+
+signup() {
+  this.router.navigate(['signup']);
+}
+
   ngOnInit() {
   }
   async presentAlert(header: string, message:string){
