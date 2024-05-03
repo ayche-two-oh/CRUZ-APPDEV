@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="box">
+    <h2>SIGN UP</h2>
+    <div class="input-box">
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="text" [(ngModel)]="email" class="custom-input"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" [(ngModel)]="password" class="custom-input"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Confirm Password</ion-label>
+        <ion-input type="password" [(ngModel)]="retypePassword" class="custom-input"></ion-input>
+      </ion-item>
+  
+      <ion-button (click)="signUp()" class="login-button">REGISTER</ion-button>
+      <h3>Already have an Account? <a href="/login">Login</a></h3>
+    </div>
+  </div>
+</div>

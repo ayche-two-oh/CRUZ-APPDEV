@@ -1,20 +1,41 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>HOME PAGE</ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<div class="container">
+  <h1>GAME LIST CRUD</h1>
+  <div class="content" *ngFor="let user of userList">
+    <div class="content-box">
+      <div class="content-all">
+ 
+        <ion-card>
+        <h2>Genre: {{user.genres}} </h2>
+        <h2>Game Name: {{user.gamename}} </h2>
+        <h2>Publisher: {{user.publisher}} </h2>
+        <h2>Ratings: {{user.ratings}} </h2>
+        <h2>Completed: {{user.isCompleted}} </h2>
+        <h2>Released Date: {{user.released}} </h2>
+        </ion-card>
+ 
+      </div>
+      <div class="button">
+        <ion-button color="success" (click)="update(user)"><ion-icon name="create-outline"></ion-icon></ion-button>
+        <ion-button color="danger" (click)="delete(user)"><ion-icon name="trash-outline" *ngIf="user.id"></ion-icon></ion-button>
+      </div>
+    </div>
   </div>
-</ion-content>
+
+</div>
+
+<div class="log-out-btn">
+  <ion-fab-button (click)="logOut()">
+    <ion-icon name="log-out" color="dark"></ion-icon>
+  </ion-fab-button>
+</div>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button (click)="addUser()">
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>

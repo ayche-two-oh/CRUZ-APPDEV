@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>ADD YOUR GAME</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="input-data">
+
+
+
+    <ion-item>
+      <ion-select label="Genre" multiple="true" [(ngModel)]="users.genres">
+        <ion-select-option *ngFor="let genre of genres" [value]="genre">{{ genre }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Game Name</ion-label>
+      <ion-input type="text" [(ngModel)]="users.gamename" required></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Publisher</ion-label>
+      <ion-input type="text" [(ngModel)]="users.publisher" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Ratings</ion-label>
+      <ion-input type="number" [(ngModel)]="users.ratings" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Released Date</ion-label>
+      <ion-input [(ngModel)]="users.released"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-select label="Completed" interface="popover" placeholder="Select" [(ngModel)]="users.isCompleted">
+        <ion-select-option value="true">True</ion-select-option>
+        <ion-select-option value="false">False</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+  </div>
+
+
+  <div class="addBtn">
+    <ion-button (click)="createUser()">CREATE LIST</ion-button>
+  </div>
+</ion-content>

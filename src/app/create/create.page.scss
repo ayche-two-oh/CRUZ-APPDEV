@@ -1,0 +1,33 @@
+ion-toolbar {
+    --ion-toolbar-background: #2600ff;
+    --ion-text-color: #dde5fc;
+    text-align: center;
+}
+
+ion-content {
+    --ion-background-color: linear-gradient(to top, #111827 20%, #3176cf 100%);
+    --ion-text-color: #c4c4c4;
+}
+
+ion-item ion-label {
+   font-size: 20px;
+}
+
+ion-select{
+    font-size: 20px;
+}
+
+
+.genre {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+.addBtn {
+    display: flex;
+    justify-content: center;
+}

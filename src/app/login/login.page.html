@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="box">
+    <h2>LOGIN</h2>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email"[(ngModel)]="email"></ion-input>
+
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+   
+
+    <div class="buttons">
+      <ion-button (click)="login()">Login</ion-button>
+      <h3>Don't have an Account? <a href="\signup">Sign Up</a></h3>
+    </div>
+
+  </ion-item>
+  </div>
+</div>
