@@ -1,27 +1,99 @@
-#container {
-    text-align: center;
-  
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  #container strong {
-    font-size: 20px;
-    line-height: 26px;
-  }
-  
-  #container p {
-    font-size: 16px;
-    line-height: 22px;
-  
-    color: #8c8c8c;
-  
-    margin: 0;
-  }
-  
-  #container a {
-    text-decoration: none;
-  }
+ion-header {
+  --background: #3880ff;
+  --color: white;
+}
+
+ion-toolbar {
+  --background: transparent;
+}
+
+ion-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+ion-content {
+  --background: #f4f4f9;
+  padding: 16px;
+}
+
+/* Button styles */
+ion-button {
+  margin-bottom: 10px;
+  --background: #3880ff;
+  --color: white;
+  text-transform: uppercase;
+}
+
+ion-button[color="primary"] {
+  --background: #3880ff;
+}
+
+ion-button[color="secondary"] {
+  --background: #3dc2ff;
+}
+
+ion-button[color="danger"] {
+  --background: #eb445a;
+}
+
+/* Card styles */
+ion-card {
+  margin-top: 20px;
+  --background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+ion-card-header {
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: #3880ff;
+  color: white;
+  padding: 10px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+ion-card-content {
+  padding: 20px;
+  color: #333;
+}
+
+/* Toggle and custom slider styles */
+ion-toggle {
+  margin: 10px 0;
+}
+
+custom-slider {
+  display: block;
+  margin: 20px 0;
+}
+
+/* Floating action button (FAB) styles */
+ion-fab-button {
+  --background: #3880ff;
+}
+
+ion-fab-button ion-icon {
+  color: white;
+}
+
+ion-fab-list ion-fab-button {
+  --background: #f4f4f9;
+}
+
+ion-fab-list ion-fab-button ion-icon {
+  color: #3880ff;
+}
+
+/* Additional styles for spacing and layout */
+ion-toolbar div {
+  margin-bottom: 20px;
+}
+
+br {
+  display: block;
+  margin: 10px 0;
+}

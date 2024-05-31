@@ -9,6 +9,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+
+  arrayUserName: string[] = ['user1','admin'];
+  arrayPassword: string[] = ['pass1','admin1'];
+
   userName: string = "";
   password: string = "";
   constructor(private alertController: AlertController, private authenticate: AuthenticationService, private toastController: ToastController, private router: Router) { }
@@ -17,7 +21,11 @@ export class LoginPage implements OnInit {
   }
 
   async toLogin() {
-    if (this.userName == "user1" && this.password == "pass" || this.userName == "admin" && this.password == "admin1"){
+    const index = this.arrayUserName.indexOf(this.userName);
+    if (index !== -1 && this.arrayPassword[index] === this.password) {
+      localStorage.setItem('username', this.userName);
+      localStorage.setItem('password', this.password);
+      
       const alert = await this.alertController.create ({
         header: 'Alert',
         subHeader: 'Status',

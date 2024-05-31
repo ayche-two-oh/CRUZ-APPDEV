@@ -1,4 +1,4 @@
 export interface Show {
-    name: string;
-    genres: string;
+  name: string;
+  genres: string;
 }

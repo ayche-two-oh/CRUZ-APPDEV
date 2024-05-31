@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { AuthenticationService } from './authentication.service';
 import { TabsComponent } from './tabs/tabs.component';
+import { AuthenticationService } from './authentication.service';
 
 const routes: Routes = [
   {
@@ -14,28 +14,37 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule),
-  },
-  {
-    path: 'dashboard',
-    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
+    path: 'components',
+    loadChildren: () => import('./components/components.module').then( m => m.ComponentsPageModule),
+    canActivate:[AuthenticationService]
   },
   {
     path: 'tabs',
     component: TabsComponent,
-    canActivate: [AuthenticationService],
     children: [
       {
         path: 'dashboard',
-        loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
+        loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule),
+        canActivate:[AuthenticationService]
       },
       {
         path: 'components',
-        loadChildren: () => import('./components/components.module').then( m => m.ComponentsPageModule)
+        loadChildren: () => import('./components/components.module').then( m => m.ComponentsPageModule),
+        canActivate:[AuthenticationService]
       },
     ]
-  }
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule),
+    canActivate:[AuthenticationService]
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule),
+
+  },
+
 
 
 ];
