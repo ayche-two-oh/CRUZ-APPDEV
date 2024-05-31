@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthenticationService {
-
+  canProceed = false;
   constructor(private router:Router) { }
   setAuthentication(auth:boolean) {
     if (auth){
@@ -15,8 +15,11 @@ export class AuthenticationService {
   canActivate(){
     if (localStorage.getItem("loggedIn") == "true"){
       return true;
-    }
+    }else
     this.router.navigate(['login']);
     return false;
   }
 }
+
+
+
