@@ -9,7 +9,7 @@ import { ModalComponent } from '../modal/modal.component';
 })
 export class ComponentsPage implements OnInit {
 
-  condition = false;
+
   constructor(private modalController: ModalController, private alertController: AlertController, private toastController: ToastController) { }
 
   ngOnInit() {
