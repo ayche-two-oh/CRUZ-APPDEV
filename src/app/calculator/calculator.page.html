@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title style="color: black;">Welcome to Calculator admin</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="calculator">
+
+    <div style="color:black" class="inputBtn">
+      <ion-input class="result" [(ngModel)]="answresult"></ion-input>
+      <label style="color:black">History</label>
+      <ion-input class="history" [(ngModel)]="blankText"></ion-input>
+    </div>
+
+    <div class="container">
+      <div class="numbers">
+        <ion-button class="item" (click)="clickBtn(1)">1</ion-button>
+        <ion-button class="item" (click)="clickBtn(2)">2</ion-button>
+        <ion-button class="item" (click)="clickBtn(3)">3</ion-button>
+        <ion-button class="item" (click)="clickBtn(4)">4</ion-button>
+        <ion-button class="item" (click)="clickBtn(5)">5</ion-button>
+        <ion-button class="item" (click)="clickBtn(6)">6</ion-button>
+        <ion-button class="item" (click)="clickBtn(7)">7</ion-button>
+        <ion-button class="item" (click)="clickBtn(8)">8</ion-button>
+        <ion-button class="item" (click)="clickBtn(9)">9</ion-button>
+        <ion-button class="item" (click)="clearBtn()">C</ion-button>
+        <ion-button class="item" (click)="clickBtn(0)">0</ion-button>
+        <ion-button class="item" (click)="answerBtn()">=</ion-button>
+      </div>
+
+
+      <div class="operations">
+        <ion-button class="item" (click)="operation('/')">/</ion-button>
+        <ion-button class="item" (click)="operation('*')">x</ion-button>
+        <ion-button class="item" (click)="operation('-')">-</ion-button>
+        <ion-button class="item" (click)="operation('+')">+</ion-button>
+      </div>
+
+    </div>
+  </div>
+</ion-content>

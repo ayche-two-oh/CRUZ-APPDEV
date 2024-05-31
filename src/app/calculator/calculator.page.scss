@@ -1,0 +1,33 @@
+ion-header{
+    text-align: center;
+}
+
+.container ion-button{
+    width: 100px;
+    margin: 13px 0 0 13px;
+}
+
+.calculator{
+    width: 100%;
+    height: 50%;
+
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 400px;
+
+}
+
+.numbers{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.operations{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
