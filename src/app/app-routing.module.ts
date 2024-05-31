@@ -25,12 +25,14 @@ const routes: Routes = [
       {
         path: 'dashboard',
         loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule),
-        canActivate:[AuthenticationService]
       },
       {
         path: 'components',
         loadChildren: () => import('./components/components.module').then( m => m.ComponentsPageModule),
-        canActivate:[AuthenticationService]
+      },
+      {
+        path: 'calculator',
+        loadChildren: () => import('./calculator/calculator.module').then( m => m.CalculatorPageModule),
       },
     ]
   },
@@ -44,9 +46,11 @@ const routes: Routes = [
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule),
 
   },
-
-
-
+  {
+    path: 'calculator',
+    loadChildren: () => import('./calculator/calculator.module').then( m => m.CalculatorPageModule),
+    canActivate:[AuthenticationService]
+  },
 ];
 
 @NgModule({
